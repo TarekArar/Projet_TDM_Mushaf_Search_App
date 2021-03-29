@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    tools:context=".ui.auth.LoginFragment"
+    android:fillViewport="true"
+    android:isScrollContainer="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.399"
+            tools:layout_editor_absoluteX="0dp"
+            android:paddingHorizontal="40dp">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                android:textColor="@color/text_color"
+                android:textSize="25sp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/username_edit_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColorHint="@color/secondary_color"
+                app:boxBackgroundColor="@color/primary_color"
+                app:boxBackgroundMode="filled"
+                app:boxStrokeColor="@color/secondary_color"
+                app:boxStrokeWidth="1dp"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                app:boxStrokeWidthFocused="1.6dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/username"
+                    android:imeOptions="actionNext"
+                    android:maxLength="30"
+                    android:layout_marginStart="-15dp"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="@color/text_color" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password_edit_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/primary_color"
+                android:textColorHint="@color/secondary_color"
+                app:boxBackgroundColor="@color/primary_color"
+                app:boxStrokeColor="@color/secondary_color"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeWidthFocused="1.6dp"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/text_color">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/password"
+                    android:maxLength="30"
+                    android:imeOptions="actionNext"
+                    android:layout_marginStart="-15dp"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textColor="@color/text_color" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/login_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:paddingHorizontal="50dp"
+                android:paddingVertical="10dp"
+                android:layout_gravity="center"
+                android:text="@string/login"
+                android:enabled="true"
+                android:textColor="@color/text_color"
+                app:strokeColor="#98a1bb"
+                app:strokeWidth="1dp"
+                />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
