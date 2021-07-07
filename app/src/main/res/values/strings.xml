@@ -13,4 +13,7 @@
     <string name="login">Login</string>
     <string name="password">Password</string>
     <string name="username">username</string>
+    <string name="number_of_worlds">عدد الكلمات :  </string>
+    <string name="number_of_letter">عدد الحروف :  </string>
+    <string name="number_of_result">عدد النتائج :  </string>
 </resources>

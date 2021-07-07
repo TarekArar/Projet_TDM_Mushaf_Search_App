@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.mazrou.boilerplate.ui.auth.LoginFragment"
+        android:name="com.mazrou.boilerplate.ui.main.SearchFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_search" />
 </navigation>

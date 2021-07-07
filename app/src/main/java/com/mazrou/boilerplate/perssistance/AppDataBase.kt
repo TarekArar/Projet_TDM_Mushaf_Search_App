@@ -4,21 +4,24 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.mazrou.boilerplate.model.AccountProperties
-import com.mazrou.boilerplate.model.AuthToken
-import com.mazrou.boilerplate.model.User
+import com.mazrou.boilerplate.model.database.Ayat
+import com.mazrou.boilerplate.model.database.RacineModel
+import com.mazrou.boilerplate.model.database.Surah
+import com.mazrou.boilerplate.model.database.World
 
 
 @Database(
-    entities = [AccountProperties::class,
-        AuthToken::class],
+    entities = [
+        Surah::class ,
+        Ayat::class ,
+        RacineModel::class ,
+        World::class],
     version = 1
 )
 abstract class AppDataBase : RoomDatabase() {
 
-    abstract fun getAuthTokenDao(): AuthTokenDao
+    abstract fun getQuranDao(): QuranDao
 
-    abstract fun getAccountPropertiesDao(): AccountPropertiesDao
 
     companion object {
         const val DATABASE_NAME = "app_db"

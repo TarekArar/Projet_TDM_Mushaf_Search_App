@@ -12,17 +12,14 @@ import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.WhichButton
 import com.afollestad.materialdialogs.actions.getActionButton
 import com.afollestad.materialdialogs.callbacks.onDismiss
-import com.mazrou.boilerplate.ApplicationClass
+
 import com.mazrou.boilerplate.R
-import com.mazrou.boilerplate.session.SessionManager
-import com.mazrou.boilerplate.ui.UICommunicationListener
+
 import com.mazrou.boilerplate.util.MessageType
 import com.mazrou.boilerplate.util.Response
 import com.mazrou.boilerplate.util.StateMessageCallback
 import com.mazrou.boilerplate.util.UIComponentType
-import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.FlowPreview
-import kotlinx.coroutines.InternalCoroutinesApi
+
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.closestKodein
@@ -35,7 +32,7 @@ abstract class BaseActivity : AppCompatActivity(), KodeinAware, UICommunicationL
 
     override val kodein: Kodein by closestKodein()
 
-    val sessionManager: SessionManager by instance()
+
     val TAG: String = "AppDebug"
     private var dialogInView: Dialog? = null
 

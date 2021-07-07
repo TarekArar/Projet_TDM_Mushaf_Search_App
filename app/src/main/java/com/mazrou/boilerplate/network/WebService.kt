@@ -1,37 +1,40 @@
 package com.mazrou.boilerplate.network
 
-import android.util.Log
+
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import com.mazrou.boilerplate.network.network_response.LoginResponse
-import com.mazrou.boilerplate.network.network_response.RegistrationResponse
+import com.mazrou.boilerplate.model.database.Ayat
+import com.mazrou.boilerplate.model.database.RacineModel
+import com.mazrou.boilerplate.model.database.Surah
+import com.mazrou.boilerplate.model.database.World
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.POST
+import retrofit2.http.GET
 
-const val BASE_URL = "https://somethis.com"
+
+const val BASE_URL = "https://json-server-api22.herokuapp.com"
 
 interface WebService {
 
-    @POST("/login")
-    @FormUrlEncoded
-    suspend fun login(
-        @Field("username") username: String,
-        @Field("password") password: String,
-    ): LoginResponse
+    @GET("/ayah")
+    suspend fun getAllAyat(
+    ): List<Ayat>
 
-    @POST("/account/register")
-    @FormUrlEncoded
-    suspend fun register(
-        @Field("email") email: String,
-        @Field("username") username: String,
-        @Field("password") password: String,
-        @Field("password2") password2: String
-    ): RegistrationResponse
+    @GET("/surah ")
+    suspend fun getAllSurah(
+    ): List<Surah>
+
+
+    @GET("/mots")
+    suspend fun getAllWorlds(
+    ): List<World>
+
+    @GET("/racines")
+    suspend fun getAllRacine(
+    ): List<RacineModel>
+
 
 
     companion object {
@@ -49,7 +52,7 @@ interface WebService {
             logging.level = HttpLoggingInterceptor.Level.HEADERS
 
             val httpClient = OkHttpClient.Builder()
-                .callTimeout(2, java.util.concurrent.TimeUnit.MINUTES)
+                .callTimeout(5, java.util.concurrent.TimeUnit.MINUTES)
                 .connectTimeout(1000, java.util.concurrent.TimeUnit.SECONDS)
                 .readTimeout(1000, java.util.concurrent.TimeUnit.SECONDS)
                 .writeTimeout(1000, java.util.concurrent.TimeUnit.SECONDS)

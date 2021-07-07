@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="4dp"
+    android:layout_marginVertical="2dp"
+    app:cardCornerRadius="4dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:elevation="3dp"
+    app:cardElevation="3dp"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingHorizontal="10dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/racine_txt_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
+            android:text="fdgfdg"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/number_of_world_txt_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/number_of_world_txt_view"
+            app:layout_constraintVertical_bias="0.428" />
+
+        <TextView
+            android:id="@+id/number_of_world_txt_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp"
+            android:textSize="12.6sp"
+            android:textStyle="bold"
+            android:text="44"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+          />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginStart="2dp"
+            android:text="@string/number_of_worlds"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/number_of_world_txt_view"
+            app:layout_constraintStart_toEndOf="@+id/number_of_world_txt_view"
+            app:layout_constraintTop_toTopOf="@+id/number_of_world_txt_view" />
+
+        <TextView
+            android:id="@+id/number_letter_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/number_of_letter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/number_letter_txt_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:text="39"
+            android:textSize="12.6sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/number_letter_label"
+            app:layout_constraintEnd_toEndOf="@+id/number_letter_label"
+            app:layout_constraintEnd_toStartOf="@+id/number_letter_label"
+            app:layout_constraintTop_toTopOf="@+id/number_letter_label" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

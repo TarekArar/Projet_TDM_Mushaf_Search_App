@@ -12,10 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Boilerplate">
-        <activity android:name=".ui.main.MainActivity">
 
-        </activity>
-        <activity android:name=".ui.auth.AuthActivity"
+        <activity android:name=".ui.main.MainActivity"
             android:theme="@style/Theme.Boilerplate"
 
             android:windowSoftInputMode="stateHidden">

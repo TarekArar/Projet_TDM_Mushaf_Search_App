@@ -6,7 +6,7 @@ class Constants {
     companion object {
 
 
-        const val NETWORK_TIMEOUT = 50000L
+        const val NETWORK_TIMEOUT = 10000L
         const val CACHE_TIMEOUT = 2000L
         const val TESTING_NETWORK_DELAY = 0L // fake network delay for testing
         const val TESTING_CACHE_DELAY = 0L // fake cache delay for testing
